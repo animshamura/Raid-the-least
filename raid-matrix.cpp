@@ -11,7 +11,7 @@ int findHighestTotal() {
 
   for (int i = row - 2; i >= 0; i--) {
     for (int j = 0; j < col; j++) {
-      int highestAdjacent = matrix2[i + 1][j];
+      int highestAdjacent = matrix2[i + 1][j]; 
       if (j > 0) highestAdjacent = max(highestAdjacent, matrix2[i + 1][j - 1]);
       if (j < col - 1) highestAdjacent = max(highestAdjacent, matrix2[i + 1][j + 1]);
       matrix2[i][j] += highestAdjacent;
